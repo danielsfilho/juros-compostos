@@ -1,0 +1,165 @@
+:root{
+    --primary-color: #e7890e;
+    --secondary-color: #fff;
+    --background-color: #282736;
+    --error-color: #FF0000;
+    --background-error: rgba(255, 0, 0, 0.383);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+nav{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+nav h1{
+    font-size: 6em;
+}
+
+article {
+    padding: 100px 20px;
+}
+
+article h2{
+    font-size: 3em;
+}
+
+.container{
+    display: flex;
+}
+
+.container form div {
+    margin: 10% 0;
+}
+
+.container form{
+    position: relative;
+    width: 500px;
+    flex-wrap: wrap-reverse;
+}
+
+label{
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+input{
+    font-size: 1.5em;
+    padding-left: 5%;
+    position: absolute;
+    right: 0;
+
+}
+
+#contributionTime{
+    font-size: 1.5em;
+    right: 0;
+    position: absolute;
+
+}
+
+.boxError{
+    display: block;
+}
+
+.inputError{
+    border: 1px solid var(--error-color);
+    background-color: var(--background-error);
+}
+
+p{
+    color: var(--error-color);
+    font-weight: bold;
+    margin: 2% 0;
+    
+}
+
+#btnSimulator{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px 15px 15px 15px;
+    font-weight: bold;
+}
+
+#resetSimulator{
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px 15px 15px 15px;
+    font-weight: bold;
+}
+
+.divResult{
+    position: relative;
+    min-width: 50%;
+}
+
+.divResult #result{
+    margin: auto;
+    align-items: center;
+    min-width: 50%;
+    max-width: 70%;
+    height: 100%;
+    position: relative;
+
+}
+
+.divResult #result h3{
+    font-size: 1.5em;
+    color: var(--primary-color);
+    position: absolute;
+    margin: 20% 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+@media (max-width: 1046px){
+    
+    .container{
+        display: block;
+    }
+
+    form{
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 526px) {
+
+    input{
+        display: block;
+    }
+
+    .container form{
+        display: block;
+        width: 320px;
+    }
+
+
+    .contributionTime{
+        display: block;
+    }
+}
+

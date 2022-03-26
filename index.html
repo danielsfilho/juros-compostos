@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <nav>
+        <h1>Ciclic</h1>
+    </nav>
+
+    
+    <article>
+
+        <h2>Simulador</h2>
+
+        <section class="container">
+            <form method="POST" onsubmit="userSimulator()">
+    
+                <div>
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" placeholder="Seu nome">
+                    
+                </div>
+    
+                <div>
+                    <label for="monthlyPayment">Mensalidade:</label>
+                    <input type="number" name="monthlyPayment" id="monthlyPayment" step="any" placeholder="R$">
+                   
+                </div>
+    
+                <div>
+                    <label for="interestCompound">Taxa de juros:</label>
+                    <input type="number" name="interestCompound" id="interestCompound" step="any" placeholder="0,00">
+                    
+                </div>
+    
+                <div>
+                    <label for="contributionTime">Tempo</label>
+                    <select name="time" id="contributionTime">
+                        <option value="">- Selecione o tempo -</option>
+                        <option value="12">1 ano</option>
+                        <option value="24">2 anos</option>
+                        <option value="36">3 anos</option>
+                        <option value="48">4 anos</option>
+                        <option value="60">5 anos</option>
+                        <option value="72">6 anos</option>
+                        <option value="84">7 anos</option>
+                        <option value="96">8 anos</option>
+                        <option value="108">9 anos</option>
+                        <option value="120">10 anos</option>
+                    </select>
+                    
+                </div> 
+                
+                <div class="boxError">
+                    
+                    <p class="interestError"></p>
+                    <p class="monthlyError"></p>
+                    <p class="nameError"></p>
+                    <p class="timeError"></p>
+
+                </div>
+    
+    
+                <button type="submit" id="btnSimulator">Simular</button>
+                <button type="button" id="resetSimulator">Simular novamente</button>
+            </form>
+
+            <div class="divResult">
+                <div id="result"></div>
+            </div>
+
+        </section>
+
+
+    </article>
+
+
+
+
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
