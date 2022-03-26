@@ -129,7 +129,6 @@ function userSimulator() {
     fetch(url, options)
         .then(response => response.json())
         .then(displayResult)
-        .then(validando)
         .catch(e => console.log("Ocorreu um erro:" + e.message))
         
         
