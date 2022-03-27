@@ -6,4 +6,3 @@ Essa aplicação simula um investimento utilizando juros compostos.
 
 Git Pages: https://danielsfilho.github.io/juros-compostos/
 
-OBS: A aplicação pelo git pages não esta funcional porque ele não deixa fazer requisição de api e como eu utilizei uma api para fazer post, ele não funciona.
