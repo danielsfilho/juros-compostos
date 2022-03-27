@@ -21,7 +21,7 @@ function charValidation(e) {
 
     const char = String.fromCharCode(e.keyCode)
 
-    const pattern = '[a-zA-Z0-9]+'
+    const pattern = '[a-zA-0-9]'
 
     if(char.match(pattern)){
         console.log(char)
