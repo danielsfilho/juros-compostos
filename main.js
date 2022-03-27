@@ -4,6 +4,31 @@ let interestCompound = document.querySelector('#interestCompound')
 let contributionTime = document.querySelector('#contributionTime')
 
 
+inputName.addEventListener("keypress", function(e) {
+
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58) {
+        e.preventDefault()
+    }
+
+    if(!charValidation(e)) {
+        e.preventDefault()
+    }
+})
+
+function charValidation(e) {
+
+    const char = String.fromCharCode(e.keyCode)
+
+    const pattern = '[a-zA-Z0-9]+'
+
+    if(char.match(pattern)){
+        console.log(char)
+        return true
+    }
+}
+
 function displayResult(data) {
     let monthlyNumber =  Number(monthlyPayment.value.toString().replace('.',''))
     let convertMonthly = monthlyNumber.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})
@@ -12,8 +37,8 @@ function displayResult(data) {
     let resultConvert = resultNumber.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})
     let resultHtml = document.querySelector('#result')
 
-
     let validation = false
+
 
     if(!inputName.value) {  
         validation = true
